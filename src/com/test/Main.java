@@ -8,9 +8,20 @@ public class Main {
 
 //        xmas();
 
-        whichBigger();
+//        whichBigger();
+
+        whichBiggerMath();
 
     }
+
+    private static void whichBiggerMath() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Witaj, podaj proszę dwie liczby");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        System.out.println(Math.max(a,b) + " jest większą liczbą");
+    }
+
     private static void whichBigger() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Witaj, podaj proszę dwie liczby");
