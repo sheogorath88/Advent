@@ -19,6 +19,10 @@ public class Main {
         System.out.println("Witaj, podaj proszę dwie liczby");
         int a = scanner.nextInt();
         int b = scanner.nextInt();
+        if(a == b){
+            System.out.println("Podano dwie liczby o tej samej wartości");
+            System.exit(128);
+        }
         System.out.println(Math.max(a,b) + " jest większą liczbą");
     }
 
