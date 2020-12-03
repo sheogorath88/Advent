@@ -10,8 +10,21 @@ public class Main {
 
 //        whichBigger();
 
-        whichBiggerMath();
+//        whichBiggerMath();
+//
+        whichSmaller();
 
+    }
+    private static void whichSmaller() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Witaj, podaj proszę dwie liczby");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        if(a == b){
+            System.out.println("Podano dwie liczby o tej samej wartości");
+            System.exit(128);
+        }
+        System.out.println(Math.min(a,b) + " jest mniejszą liczbą");
     }
 
     private static void whichBiggerMath() {
