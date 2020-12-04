@@ -14,11 +14,11 @@ public class Main {
 //
 //        whichSmaller();
 
-        checkTheDay(4);
+        checkTheDay(12, 4);
 
     }
-    private static void checkTheDay(int a){
-        if(12 % a == 0){
+    private static void checkTheDay(int a, int b){
+        if(a % b == 0){
             System.out.println("Dzisiejszy dzien jest dzielnikiem grudnia");
         } else {
             System.out.println("Dzisiejszy dzien nie jest dzielnikiem grudnia");
