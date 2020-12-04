@@ -12,19 +12,30 @@ public class Main {
 
 //        whichBiggerMath();
 //
-        whichSmaller();
+//        whichSmaller();
+
+        checkTheDay(4);
 
     }
+    private static void checkTheDay(int a){
+        if(12 % a == 0){
+            System.out.println("Dzisiejszy dzien jest dzielnikiem grudnia");
+        } else {
+            System.out.println("Dzisiejszy dzien nie jest dzielnikiem grudnia");
+        }
+
+    }
+
     private static void whichSmaller() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Witaj, podaj proszę dwie liczby");
         int a = scanner.nextInt();
         int b = scanner.nextInt();
-        if(a == b){
+        if (a == b) {
             System.out.println("Podano dwie liczby o tej samej wartości");
             System.exit(128);
         }
-        System.out.println(Math.min(a,b) + " jest mniejszą liczbą");
+        System.out.println(Math.min(a, b) + " jest mniejszą liczbą");
     }
 
     private static void whichBiggerMath() {
@@ -32,11 +43,11 @@ public class Main {
         System.out.println("Witaj, podaj proszę dwie liczby");
         int a = scanner.nextInt();
         int b = scanner.nextInt();
-        if(a == b){
+        if (a == b) {
             System.out.println("Podano dwie liczby o tej samej wartości");
             System.exit(128);
         }
-        System.out.println(Math.max(a,b) + " jest większą liczbą");
+        System.out.println(Math.max(a, b) + " jest większą liczbą");
     }
 
     private static void whichBigger() {
@@ -52,6 +63,7 @@ public class Main {
             System.out.println("Podane liczby są sobie równe");
         }
     }
+
     public static void xmas() {
         System.out.println("hello, Xmas!");
     }
