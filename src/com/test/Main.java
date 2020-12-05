@@ -14,11 +14,21 @@ public class Main {
 //
 //        whichSmaller();
 
-        checkTheDay(12, 4);
+//        checkTheDay(12, 4);
+
+        countWeeksInAdvent();
 
     }
-    private static void checkTheDay(int a, int b){
-        if(a % b == 0){
+
+    private static void countWeeksInAdvent() {
+        int daysInWeek = 7;
+        int daysInAdvent = 24;
+        int wholeWeeksInAdvent = daysInAdvent / daysInWeek;
+        System.out.println("Adwent składa się z " + wholeWeeksInAdvent + " pełnych tygodni");
+    }
+
+    private static void checkTheDay(int a, int b) {
+        if (a % b == 0) {
             System.out.println("Dzisiejszy dzien jest dzielnikiem grudnia");
         } else {
             System.out.println("Dzisiejszy dzien nie jest dzielnikiem grudnia");
