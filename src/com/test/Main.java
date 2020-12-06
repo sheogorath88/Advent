@@ -1,5 +1,6 @@
 package com.test;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +17,15 @@ public class Main {
 
 //        checkTheDay(12, 4);
 
-        countWeeksInAdvent();
+//        countWeeksInAdvent();
+
+        findRandom();
+    }
+
+    private static void findRandom(){
+        Random random = new Random();
+        int number = random.nextInt(6) + 1;
+        System.out.println(number);
 
     }
 
