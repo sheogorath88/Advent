@@ -19,14 +19,30 @@ public class Main {
 
 //        countWeeksInAdvent();
 
-        findRandom();
+//        findRandom();
+
+        System.out.println("Witaj, podaj liczbę :)");
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        fizzBuzz(a);
     }
 
-    private static void findRandom(){
+    private static void fizzBuzz(int a) {
+        if ((a % 3 == 0) && (a % 5 == 0)) {
+            System.out.println("fizz buzz");
+        } else if (a % 3 == 0) {
+            System.out.println("fizz");
+        } else if (a % 5 == 0) {
+            System.out.println("buzz");
+        } else {
+            System.out.println(a);
+        }
+    }
+
+    private static void findRandom() {
         Random random = new Random();
         int number = random.nextInt(6) + 1;
         System.out.println(number);
-
     }
 
     private static void countWeeksInAdvent() {
