@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
 //        xmas();
 
 //        whichBigger();
@@ -21,10 +22,22 @@ public class Main {
 
 //        findRandom();
 
-        System.out.println("Witaj, podaj liczbę :)");
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        fizzBuzz(a);
+//        System.out.println("Witaj, podaj liczbę :)");
+//        int a = scanner.nextInt();
+//        fizzBuzz(a);
+
+        System.out.println("Podaj wyraz:");
+        String string = scanner.nextLine();
+        getSecondChar(string);
+
+    }
+
+    private static void getSecondChar(String string) {
+        if (string.length() < 3) {
+            System.out.println("Podany wyraz zawiera zbyt mało znaków");
+        } else {
+            System.out.println(string.charAt(2));
+        }
     }
 
     private static void fizzBuzz(int a) {
