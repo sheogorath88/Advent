@@ -30,16 +30,21 @@ public class Main {
 //        String string = scanner.nextLine();
 //        getSecondChar(string);
 
-        System.out.println("Podaj dwa wyrazy:");
-        String firstWord = scanner.nextLine();
-        String secondWord = scanner.nextLine();
-        if (firstWord.equals(secondWord)) {
-            System.out.println("podane słowa są identyczne!");
-        } else if (firstWord.equalsIgnoreCase(secondWord)) {
-            System.out.println("podane słowa są takie same - jednak różnią się wielkością liter");
-        } else {
-            System.out.println("podane słowa są różne");
-        }
+//        System.out.println("Podaj dwa wyrazy:");
+//        String firstWord = scanner.nextLine();
+//        String secondWord = scanner.nextLine();
+//        if (firstWord.equals(secondWord)) {
+//            System.out.println("podane słowa są identyczne!");
+//        } else if (firstWord.equalsIgnoreCase(secondWord)) {
+//            System.out.println("podane słowa są takie same - jednak różnią się wielkością liter");
+//        } else {
+//            System.out.println("podane słowa są różne");
+//        }
+
+        System.out.println("Podaj wyraz:");
+        String newWord = scanner.nextLine();
+        System.out.println(newWord.replace("a","XMAS"));
+
     }
 
     private static void getSecondChar(String string) {
