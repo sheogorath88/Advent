@@ -41,10 +41,34 @@ public class Main {
 //            System.out.println("podane słowa są różne");
 //        }
 
-        System.out.println("Podaj wyraz:");
-        String newWord = scanner.nextLine();
-        System.out.println(newWord.replace("a","XMAS"));
+//        pierwszy sposób:
 
+        System.out.println("podaj słowo:");
+        String wordToConcatenation = scanner.nextLine();
+        System.out.println("podaj liczbę:");
+        int numberToConcatenation = scanner.nextInt();
+        String numberAfterValueOf = String.valueOf(numberToConcatenation);
+        String endOfConcat = wordToConcatenation + numberAfterValueOf;
+        System.out.println(endOfConcat);
+
+//        drugi sposób:
+//        System.out.println("podaj słowo:");
+//        String wordToConcatenation2 = scanner.nextLine();
+//        System.out.println("podaj liczbę:");
+//        String numberToConcatenation2 = scanner.nextLine();
+//        String endOfConcat2 = wordToConcatenation2 + numberToConcatenation2;
+//        System.out.println(endOfConcat2);
+
+
+//        System.out.println("Podaj wyraz:");
+//        String word = scanner.nextLine();
+//        replaceChar(word);
+
+    }
+
+    private static void replaceChar(String word){
+        String newWord = word.replace("a", "XMAS");
+        System.out.println(newWord);
     }
 
     private static void getSecondChar(String string) {
