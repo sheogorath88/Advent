@@ -41,23 +41,10 @@ public class Main {
 //            System.out.println("podane słowa są różne");
 //        }
 
-//        pierwszy sposób:
 
-        System.out.println("podaj słowo:");
-        String wordToConcatenation = scanner.nextLine();
-        System.out.println("podaj liczbę:");
-        int numberToConcatenation = scanner.nextInt();
-        String numberAfterValueOf = String.valueOf(numberToConcatenation);
-        String endOfConcat = wordToConcatenation + numberAfterValueOf;
-        System.out.println(endOfConcat);
+//        concatStringInt(scanner);
 
-//        drugi sposób:
-//        System.out.println("podaj słowo:");
-//        String wordToConcatenation2 = scanner.nextLine();
-//        System.out.println("podaj liczbę:");
-//        String numberToConcatenation2 = scanner.nextLine();
-//        String endOfConcat2 = wordToConcatenation2 + numberToConcatenation2;
-//        System.out.println(endOfConcat2);
+        giveTheSquareOfTheLength(scanner);
 
 
 //        System.out.println("Podaj wyraz:");
@@ -66,7 +53,23 @@ public class Main {
 
     }
 
-    private static void replaceChar(String word){
+    private static void giveTheSquareOfTheLength(Scanner scanner) {
+        System.out.println("Podaj wyraz");
+        String string = scanner.nextLine();
+        System.out.println("Kwadrat długości Twojego wyrazu to " + ((int)Math.pow(string.length(),2)));
+    }
+
+    private static void concatStringInt(Scanner scanner) {
+        System.out.println("podaj słowo:");
+        String wordToConcatenation = scanner.nextLine();
+        System.out.println("podaj liczbę:");
+        int numberToConcatenation = scanner.nextInt();
+        String numberAfterValueOf = String.valueOf(numberToConcatenation);
+        String endOfConcat = wordToConcatenation + numberAfterValueOf;
+        System.out.println(endOfConcat);
+    }
+
+    private static void replaceChar(String word) {
         String newWord = word.replace("a", "XMAS");
         System.out.println(newWord);
     }
