@@ -40,17 +40,30 @@ public class Main {
 //        } else {
 //            System.out.println("podane słowa są różne");
 //        }
-
-
+        
 //        concatStringInt(scanner);
 
-        giveTheSquareOfTheLength(scanner);
+//        giveTheSquareOfTheLength(scanner);
 
 
 //        System.out.println("Podaj wyraz:");
 //        String word = scanner.nextLine();
 //        replaceChar(word);
 
+        getSum(scanner);
+
+
+    }
+
+    private static void getSum(Scanner scanner) {
+        System.out.println("podaj proszę pięc wyrazów");
+        String word1 = scanner.nextLine();
+        String word2 = scanner.nextLine();
+        String word3 = scanner.nextLine();
+        String word4 = scanner.nextLine();
+        String word5 = scanner.nextLine();
+        int sum = word1.length() + word2.length() + word3.length() + word4.length() + word5.length();
+        System.out.println(sum);
     }
 
     private static void giveTheSquareOfTheLength(Scanner scanner) {
