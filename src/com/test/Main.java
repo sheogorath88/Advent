@@ -40,7 +40,7 @@ public class Main {
 //        } else {
 //            System.out.println("podane słowa są różne");
 //        }
-        
+
 //        concatStringInt(scanner);
 
 //        giveTheSquareOfTheLength(scanner);
@@ -50,9 +50,21 @@ public class Main {
 //        String word = scanner.nextLine();
 //        replaceChar(word);
 
-        getSum(scanner);
+//        getSum(scanner);
 
+        getFirst100();
 
+    }
+
+    private static void getFirst100() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 10 == 0) {
+                System.out.print(i);
+                System.out.println();
+            } else {
+                System.out.print(i + " ");
+            }
+        }
     }
 
     private static void getSum(Scanner scanner) {
