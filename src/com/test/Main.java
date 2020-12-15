@@ -52,8 +52,22 @@ public class Main {
 
 //        getSum(scanner);
 
-        getFirst100();
+//        getFirst100();
 
+        multiplyNumbers(scanner);
+    }
+
+    private static void multiplyNumbers(Scanner scanner) {
+        System.out.println("Podaj proszę liczbę");
+        int input = scanner.nextInt();
+        int i = 1;
+        for(i = 1; i <= 10; i++) {
+            if(i == 10){
+                System.out.println((i * input) + ".");
+            }else{
+            System.out.print((i * input) + ", ");
+            }
+        }
     }
 
     private static void getFirst100() {
