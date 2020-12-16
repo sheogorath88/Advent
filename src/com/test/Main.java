@@ -60,8 +60,7 @@ public class Main {
     private static void multiplyNumbers(Scanner scanner) {
         System.out.println("Podaj proszę liczbę");
         int input = scanner.nextInt();
-        int i = 1;
-        for(i = 1; i <= 10; i++) {
+        for(int i = 1; i <= 10; i++) {
             if(i == 10){
                 System.out.println((i * input) + ".");
             }else{
