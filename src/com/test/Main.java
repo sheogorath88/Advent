@@ -54,7 +54,29 @@ public class Main {
 
 //        getFirst100();
 
-        multiplyNumbers(scanner);
+//        multiplyNumbers(scanner);
+
+        getDivisors(scanner);
+//        zastanawiam się czy jak proszę użytkownika o podanie liczby dodatniej to czy mam w kodzie uwzględniać, że może podać "0" albo liczbę ujemną?
+    }
+
+    private static void getDivisors(Scanner scanner) {
+        System.out.println("Podaj proszę liczbę dodatnią");
+        int inputNumber = scanner.nextInt();
+        if (inputNumber == 1) {
+            System.out.println("1");
+        } else {
+            System.out.print("1, ");
+            for (int i = 2; i <= inputNumber; i++) {
+                int j = inputNumber % i;
+                if (i == inputNumber) {
+                    System.out.println(inputNumber);
+                } else if (j == 0) {
+                    System.out.print(i + ", ");
+                }
+
+            }
+        }
     }
 
     private static void multiplyNumbers(Scanner scanner) {
