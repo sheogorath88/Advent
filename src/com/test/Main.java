@@ -65,7 +65,7 @@ public class Main {
         int inputNumber = scanner.nextInt();
         if (inputNumber == 1) {
             System.out.println("1");
-        } else {
+        } else if (inputNumber > 0) {
             System.out.print("1, ");
             for (int i = 2; i <= inputNumber; i++) {
                 int j = inputNumber % i;
@@ -74,19 +74,20 @@ public class Main {
                 } else if (j == 0) {
                     System.out.print(i + ", ");
                 }
-
             }
+        } else {
+            System.out.println("podaj liczbę dodatnią!");
         }
     }
 
     private static void multiplyNumbers(Scanner scanner) {
         System.out.println("Podaj proszę liczbę");
         int input = scanner.nextInt();
-        for(int i = 1; i <= 10; i++) {
-            if(i == 10){
+        for (int i = 1; i <= 10; i++) {
+            if (i == 10) {
                 System.out.println((i * input) + ".");
-            }else{
-            System.out.print((i * input) + ", ");
+            } else {
+                System.out.print((i * input) + ", ");
             }
         }
     }
@@ -116,7 +117,7 @@ public class Main {
     private static void giveTheSquareOfTheLength(Scanner scanner) {
         System.out.println("Podaj wyraz");
         String string = scanner.nextLine();
-        System.out.println("Kwadrat długości Twojego wyrazu to " + ((int)Math.pow(string.length(),2)));
+        System.out.println("Kwadrat długości Twojego wyrazu to " + ((int) Math.pow(string.length(), 2)));
     }
 
     private static void concatStringInt(Scanner scanner) {
