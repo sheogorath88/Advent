@@ -76,7 +76,7 @@ public class Main {
                 }
             }
         } else {
-            System.out.println("podaj liczbę dodatnią!");
+            System.out.println("podaj liczbę dodatnią! ");
         }
     }
 
