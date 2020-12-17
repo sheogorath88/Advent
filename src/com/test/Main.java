@@ -56,8 +56,19 @@ public class Main {
 
 //        multiplyNumbers(scanner);
 
-        getDivisors(scanner);
+//        getDivisors(scanner);
 //        zastanawiam się czy jak proszę użytkownika o podanie liczby dodatniej to czy mam w kodzie uwzględniać, że może podać "0" albo liczbę ujemną?
+
+        printFormTheEnd(scanner);
+    }
+
+    private static void printFormTheEnd(Scanner scanner) {
+        System.out.println("Podaj proszę wyraz");
+        String fromTheEnd = scanner.nextLine();
+        char [] charArray = fromTheEnd.toCharArray();
+        for(int i =charArray.length - 1; i >= 0; i--){
+            System.out.print(charArray[i]);
+        }
     }
 
     private static void getDivisors(Scanner scanner) {
