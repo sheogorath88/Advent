@@ -59,7 +59,34 @@ public class Main {
 //        getDivisors(scanner);
 //        zastanawiam się czy jak proszę użytkownika o podanie liczby dodatniej to czy mam w kodzie uwzględniać, że może podać "0" albo liczbę ujemną?
 
-        printFormTheEnd(scanner);
+//        printFormTheEnd(scanner);
+
+        sumOfNumbers(scanner);
+    }
+
+    private static void sumOfNumbers(Scanner scanner) {
+        System.out.println("Podaj proszę 10 dowolych liczb");
+        int n = 10;
+        int [] table = new int[n];
+        for(int i = 0; i < n; i++ ){
+            table [i] = scanner.nextInt();
+        }
+        int positiveNumbers = 0;
+        int non_positiveNumbers= 0;
+        int zero = 0;
+
+        for(int i = 0; i < n; i++){
+            if(table[i] == 0){
+                zero += 1;
+            }else if(table[i] > 0) {
+                positiveNumbers = positiveNumbers + table[i];
+            }else {
+                non_positiveNumbers = non_positiveNumbers + table[i];
+            }
+        }
+        System.out.println("liczba podanych zer to: " + zero);
+        System.out.println("suma podanych liczb dodatnich to : " + positiveNumbers);
+        System.out.println("suma podanych liczb ujemnych to : " + non_positiveNumbers);
     }
 
     private static void printFormTheEnd(Scanner scanner) {
