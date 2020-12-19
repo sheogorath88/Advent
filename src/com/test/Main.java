@@ -61,7 +61,28 @@ public class Main {
 
 //        printFormTheEnd(scanner);
 
-        sumOfNumbers(scanner);
+//        sumOfNumbers(scanner);
+
+        quadraticEquation(scanner);
+    }
+
+    private static void quadraticEquation(Scanner scanner) {
+        System.out.println("Podaj proszę trzy liczby. Będzie to kolejno a, b i c:");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        int delta = (int)Math.pow(b,2) - (4 * a * c);
+        System.out.println("Delta tego równania delta wynosi: " + delta);
+        if(delta == 0){
+            int x0 = (-1 * b)/(2 * a);
+            System.out.println("Dla delty równej zero rozwiązaniem jest " + x0);
+        }else if (delta > 0){
+            int x1 = (((-1 * b) + (int)Math.sqrt(delta))) / (2 * a);
+            int x2 = (((-1 * b) - (int)Math.sqrt(delta))) / (2 * a);
+            System.out.println("Dla delty większej od zera istnieją dwa rozwiązania x1 = " + x1 + " oraz x2 = " + x2);
+        }else{
+            System.out.println("Dla delty mniejszej od zera, rozwiązanie nie istnieje!");
+        }
     }
 
     private static void sumOfNumbers(Scanner scanner) {
