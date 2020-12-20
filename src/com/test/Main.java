@@ -63,7 +63,24 @@ public class Main {
 
 //        sumOfNumbers(scanner);
 
-        quadraticEquation(scanner);
+//        quadraticEquation(scanner);
+
+        printChristmasTree(scanner);
+
+    }
+
+    private static void printChristmasTree(Scanner scanner) {
+        System.out.println("Z ilu poziomów ma składać się nasza choinka?");
+        int numberOfLines = scanner.nextInt();
+        for (int i = 0; i < numberOfLines; i++) {
+            for (int j = 0; j < numberOfLines - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < (2 * i + 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     private static void quadraticEquation(Scanner scanner) {
