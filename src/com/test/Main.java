@@ -1,5 +1,6 @@
 package com.test;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -65,8 +66,39 @@ public class Main {
 
 //        quadraticEquation(scanner);
 
-        printChristmasTree(scanner);
+//        printChristmasTree(scanner);
 
+        // mało "idiotoodporny" hihi 
+        chooseGift(scanner);
+
+    }
+
+    private static void chooseGift(Scanner scanner) {
+        String[] kids = {"Ania", "Bartek", "Paweł", "Krzyś", "Kasia"};
+
+        ArrayList<String> gifts = new ArrayList<>();
+        gifts.add("rózga");
+        gifts.add("Iphone");
+        gifts.add("komputer");
+        gifts.add("rower");
+        gifts.add("Xbox");
+
+        for (int i = 0; i < kids.length - 1; i++) {
+            System.out.println(kids[i] + ", który prezent wybierasz? Masz do wyboru: " + gifts);
+            String choose = scanner.nextLine();
+            if (choose.equalsIgnoreCase("rózga") || choose.equalsIgnoreCase("rozga")) {
+                gifts.remove("rózga");
+            } else if (choose.equalsIgnoreCase("Iphone")) {
+                gifts.remove("Iphone");
+            } else if (choose.equalsIgnoreCase("komputer")) {
+                gifts.remove("komputer");
+            } else if (choose.equalsIgnoreCase("rower")) {
+                gifts.remove("rower");
+            } else if (choose.equalsIgnoreCase("Xbox")) {
+                gifts.remove("Xbox");
+            }
+        }
+        System.out.println(kids[4] + ", Twoim prezentem gwiazdkowym będzie " + gifts.get(0));
     }
 
     private static void printChristmasTree(Scanner scanner) {
@@ -88,16 +120,16 @@ public class Main {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         int c = scanner.nextInt();
-        int delta = (int)Math.pow(b,2) - (4 * a * c);
+        int delta = (int) Math.pow(b, 2) - (4 * a * c);
         System.out.println("Delta tego równania delta wynosi: " + delta);
-        if(delta == 0){
-            int x0 = (-1 * b)/(2 * a);
+        if (delta == 0) {
+            int x0 = (-1 * b) / (2 * a);
             System.out.println("Dla delty równej zero rozwiązaniem jest " + x0);
-        }else if (delta > 0){
-            int x1 = (((-1 * b) + (int)Math.sqrt(delta))) / (2 * a);
-            int x2 = (((-1 * b) - (int)Math.sqrt(delta))) / (2 * a);
+        } else if (delta > 0) {
+            int x1 = (((-1 * b) + (int) Math.sqrt(delta))) / (2 * a);
+            int x2 = (((-1 * b) - (int) Math.sqrt(delta))) / (2 * a);
             System.out.println("Dla delty większej od zera istnieją dwa rozwiązania x1 = " + x1 + " oraz x2 = " + x2);
-        }else{
+        } else {
             System.out.println("Dla delty mniejszej od zera, rozwiązanie nie istnieje!");
         }
     }
@@ -105,20 +137,20 @@ public class Main {
     private static void sumOfNumbers(Scanner scanner) {
         System.out.println("Podaj proszę 10 dowolych liczb");
         int n = 10;
-        int [] table = new int[n];
-        for(int i = 0; i < n; i++ ){
-            table [i] = scanner.nextInt();
+        int[] table = new int[n];
+        for (int i = 0; i < n; i++) {
+            table[i] = scanner.nextInt();
         }
         int positiveNumbers = 0;
-        int non_positiveNumbers= 0;
+        int non_positiveNumbers = 0;
         int zero = 0;
 
-        for(int i = 0; i < n; i++){
-            if(table[i] == 0){
+        for (int i = 0; i < n; i++) {
+            if (table[i] == 0) {
                 zero += 1;
-            }else if(table[i] > 0) {
+            } else if (table[i] > 0) {
                 positiveNumbers = positiveNumbers + table[i];
-            }else {
+            } else {
                 non_positiveNumbers = non_positiveNumbers + table[i];
             }
         }
@@ -130,8 +162,8 @@ public class Main {
     private static void printFormTheEnd(Scanner scanner) {
         System.out.println("Podaj proszę wyraz");
         String fromTheEnd = scanner.nextLine();
-        char [] charArray = fromTheEnd.toCharArray();
-        for(int i =charArray.length - 1; i >= 0; i--){
+        char[] charArray = fromTheEnd.toCharArray();
+        for (int i = charArray.length - 1; i >= 0; i--) {
             System.out.print(charArray[i]);
         }
     }
